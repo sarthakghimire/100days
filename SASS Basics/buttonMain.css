@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .primary {
+  background-color: rgb(49, 108, 244);
+  color: white;
+  padding: 7px 15px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.container .primary:hover {
+  background-color: rgb(40, 100, 240);
+  color: white;
+  cursor: pointer;
+}
+.container .secondary {
+  background-color: rgb(110, 117, 124);
+  color: white;
+  padding: 7px 2px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.container .secondary:hover {
+  background-color: rgb(100, 100, 100);
+  color: white;
+  cursor: pointer;
+}
+.container .success {
+  background-color: rgb(64, 133, 88);
+  color: white;
+  padding: 7px 2px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.container .success:hover {
+  background-color: rgb(50, 110, 70);
+  color: white;
+  cursor: pointer;
+}
+.container .danger {
+  background-color: rgb(203, 68, 74);
+  color: white;
+  padding: 7px 2px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.container .danger:hover {
+  background-color: rgb(190, 50, 65);
+  color: white;
+  cursor: pointer;
+}
+.container .warning {
+  background-color: rgb(246, 195, 68);
+  color: white;
+  padding: 7px 2px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.container .warning:hover {
+  background-color: rgb(230, 170, 55);
+  color: white;
+  cursor: pointer;
+}
+.container .info {
+  background-color: rgb(93, 199, 236);
+  color: white;
+  padding: 7px 2px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.container .info:hover {
+  background-color: rgb(75, 185, 220);
+  color: white;
+  cursor: pointer;
+}
+.container .light {
+  background-color: rgb(248, 249, 250);
+  color: black;
+  padding: 7px 2px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.container .light:hover {
+  background-color: rgb(255, 255, 240);
+  color: black;
+  cursor: pointer;
+}
+.container .dark {
+  background-color: rgb(34, 37, 41);
+  color: white;
+  padding: 7px 2px;
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.container .dark:hover {
+  background-color: rgb(2, 2, 2);
+  color: white;
+  cursor: pointer;
+}/*# sourceMappingURL=buttonMain.css.map */

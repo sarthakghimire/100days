@@ -1,0 +1,107 @@
+@mixin colorCodes($bg, $text) {
+  background-color: $bg;
+  color: $text;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .primary {
+    @include colorCodes(rgb(49, 108, 244), white);
+    padding: 7px 15px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    &:hover {
+      @include colorCodes(rgb(40, 100, 240), white);
+      cursor: pointer;
+    }
+  }
+
+  .secondary {
+    @include colorCodes(rgb(110, 117, 124), white);
+    padding: 7px 2px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    &:hover {
+      @include colorCodes(rgb(100, 100, 100), white);
+      cursor: pointer;
+    }
+  }
+
+  .success {
+    @include colorCodes(rgb(64, 133, 88), white);
+    padding: 7px 2px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    &:hover {
+      @include colorCodes(rgb(50, 110, 70), white);
+      cursor: pointer;
+    }
+  }
+
+  .danger {
+    @include colorCodes(rgb(203, 68, 74), white);
+    padding: 7px 2px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    &:hover {
+      @include colorCodes(rgb(190, 50, 65), white);
+      cursor: pointer;
+    }
+  }
+
+  .warning {
+    @include colorCodes(rgb(246, 195, 68), white);
+    padding: 7px 2px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    &:hover {
+      @include colorCodes(rgb(230, 170, 55), white);
+      cursor: pointer;
+    }
+  }
+
+  .info {
+    @include colorCodes(rgb(93, 199, 236), white);
+    padding: 7px 2px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    &:hover {
+      @include colorCodes(rgb(75, 185, 220), white);
+      cursor: pointer;
+    }
+  }
+
+  .light {
+    @include colorCodes(rgb(248, 249, 250), black);
+    padding: 7px 2px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    &:hover {
+      @include colorCodes(rgb(255, 255, 240), black);
+      cursor: pointer;
+    }
+  }
+
+  .dark {
+    @include colorCodes(rgb(34, 37, 41), white);
+    padding: 7px 2px;
+    width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+    &:hover {
+      @include colorCodes(rgb(2, 2, 2), white);
+      cursor: pointer;
+    }
+  }
+}
