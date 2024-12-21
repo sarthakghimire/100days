@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tarkari Bajaar. Your go to place for fresh fruits and vegetables...
+    </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        height: 40px;
+        width: 40px;
+        outline: black;
+        background-color: rgba(0, 0, 0, 0.3);
+        background-size: 100%, 100%;
+
+        border: 1px solid black;
+      }
+      .top,
+      .footer {
+        height: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid green;
+        margin: 2px;
+      }
+      .top img {
+        height: 72px;
+        width: 55px;
+      }
+      a {
+        text-decoration: none;
+      }
+      .topLinks a,
+      .footer a {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .introPage {
+        height: 500px;
+        background: rgba(50, 200, 50, 0.4);
+        background-image: url("fruits.jpeg");
+        border: 1px solid green;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 2px;
+      }
+      .topLinks2 a {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .topLinks2 img {
+        height: 40px;
+        width: 60px;
+      }
+      .buyNow {
+        padding: 5px 25px;
+        background-color: blue;
+        color: white;
+        border-radius: 5px;
+      }
+      .buyNow:hover {
+        background-color: white;
+        color: blue;
+        cursor: pointer;
+      }
+      .buyFruits {
+        height: 600px;
+        border: 1px solid green;
+      }
+
+      .fruitsList {
+        display: flex;
+        height: 70vh;
+        justify-content: space-around;
+        align-items: center;
+        background: rgba(50, 200, 50, 0.4);
+        background-image: url("image.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom cover;
+      }
+      .fruitsList2 {
+        display: flex;
+        height: 70vh;
+        justify-content: space-around;
+        align-items: center;
+        background: rgba(50, 200, 50, 0.4);
+        background-image: url("image2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom cover;
+      }
+      .fruit {
+        height: 35vh;
+        width: 15vw;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid gray;
+        border-radius: 5px;
+        text-align: center;
+        background: white;
+      }
+      .fruit img {
+        width: 100%;
+        height: 50%;
+        color: blue;
+      }
+      .customerReviews img {
+        height: 100px;
+        width: 100px;
+      }
+      .customerReviews {
+        position: relative;
+        height: 400px;
+        border: 1px solid green;
+        background: rgba(50, 200, 50, 0.4);
+      }
+      .introPage h1,
+      .introPage p {
+        background: rgba(50, 200, 50, 0.4);
+      }
+
+      @media only screen and (max-width: 992px) {
+        .top,
+        .footer {
+          height: 72px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid green;
+          margin: 2px;
+          font-size: smaller;
+        }
+        .topLinks2 a {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        .buyFruits,
+        .buyVegetables {
+          font-size: 14px;
+          flex-wrap: wrap;
+        }
+        .customerReviews {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          position: relative;
+          height: 740px;
+        }
+        .customerReviews card {
+          margin: 4px;
+        }
+        .top img {
+          height: 32px;
+          width: 35px;
+        }
+        .fruit {
+          height: 35vh;
+          width: 20vw;
+          display: flex;
+          flex-direction: column;
+          border: 1px solid gray;
+          border-radius: 5px;
+          text-align: center;
+          background: white;
+        }
+      }
+      .card {
+        height: 60vh;
+        width: 20vw;
+      }
+      .card img {
+        height: 35vh;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <div>
+          <a href="#"><img src="logo.png" /><b>Tarkari Bajaar</b> </a>
+        </div>
+        <div class="topLinks">
+          <a href="#"><b>Home</b></a>
+          <a href="#"><b>About Us</b></a>
+          <a href="#"><b>Fruits</b></a>
+          <a href="#"><b>Vegetables</b></a>
+        </div>
+        <div class="topLinks2">
+          <a href="#"><img src="user.webp" /><b>Sign In</b></a>
+          <a href="#"><img src="cart.png" /> <b>View Cart</b></a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="introPage">
+        <h1 style="text-align: center">
+          Buy Fresh Fruits and Vegetables, from our farm to your home
+        </h1>
+        <p style="text-align: center; font-size: x-large">
+          Freshly picked items from various parts of Nepal,<br />
+          directly to your kitchen*.
+        </p>
+        <button class="buyNow">Buy Now</button>
+      </div>
+      <div class="buyFruits">
+        <div>
+          <h2><b>Shop Fruits</b></h2>
+        </div>
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="card mx-2">
+                  <img class="card-img-top" src="apple.avif" alt="Apple" />
+                  <div class="card-body">
+                    <h5 class="card-title">Apple</h5>
+                    <p class="card-text">Apples from the chilly Mustang</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="tangerine.avif" alt="Orange" />
+                  <div class="card-body">
+                    <h5 class="card-title">Orange</h5>
+                    <p class="card-text">Juicy and fresh oranges</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="junar.avif" alt="Junaar" />
+                  <div class="card-body">
+                    <h5 class="card-title">Junaar</h5>
+                    <p class="card-text">Nepal’s famous Junaar</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="kiwi.avif" alt="Kiwi" />
+                  <div class="card-body">
+                    <h5 class="card-title">Kiwi</h5>
+                    <p class="card-text">Rich in vitamin C</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="banana.avif" alt="Banana" />
+                  <div class="card-body">
+                    <h5 class="card-title">Banana</h5>
+                    <p class="card-text">Sweet and healthy bananas</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="card mx-2">
+                  <img class="card-img-top" src="avocado.avif" alt="Avocado" />
+                  <div class="card-body">
+                    <h5 class="card-title">Avocado</h5>
+                    <p class="card-text">Healthy Avocados</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="apple.avif" alt="Apple" />
+                  <div class="card-body">
+                    <h5 class="card-title">Apple</h5>
+                    <p class="card-text">Apples from the chilly Mustang</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="tangerine.avif" alt="Orange" />
+                  <div class="card-body">
+                    <h5 class="card-title">Orange</h5>
+                    <p class="card-text">Juicy and fresh oranges</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="junar.avif" alt="Junaar" />
+                  <div class="card-body">
+                    <h5 class="card-title">Junaar</h5>
+                    <p class="card-text">Nepal’s famous Junaar</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="kiwi.avif" alt="Kiwi" />
+                  <div class="card-body">
+                    <h5 class="card-title">Kiwi</h5>
+                    <p class="card-text">Rich in vitamin C</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="buyVegetables">
+        <div>
+          <h2><b>Shop Vegetables</b></h2>
+        </div>
+        <div
+          id="carouselExampleControlsVegetables"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="card mx-2">
+                  <img class="card-img-top" src="okra.avif" alt="Apple" />
+                  <div class="card-body">
+                    <h5 class="card-title">Okra</h5>
+                    <p class="card-text">AKA Lady's Finger</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="cap.avif" alt="Orange" />
+                  <div class="card-body">
+                    <h5 class="card-title">Capsicum</h5>
+                    <p class="card-text">Restaurant-ish tarkari</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="saag1.avif" alt="Junaar" />
+                  <div class="card-body">
+                    <h5 class="card-title">Saag 1</h5>
+                    <p class="card-text">Good for eyes</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="saag2.avif" alt="Kiwi" />
+                  <div class="card-body">
+                    <h5 class="card-title">Saag 2</h5>
+                    <p class="card-text">Good for eyes as well</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="aalu.avif" alt="Banana" />
+                  <div class="card-body">
+                    <h5 class="card-title">Potato</h5>
+                    <p class="card-text">Everyone's friend</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="card mx-2">
+                  <img class="card-img-top" src="brinj.avif" alt="Avocado" />
+                  <div class="card-body">
+                    <h5 class="card-title">Eggplant</h5>
+                    <p class="card-text">Jackie Shroff's favourite</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="okra.avif" alt="Apple" />
+                  <div class="card-body">
+                    <h5 class="card-title">Okra</h5>
+                    <p class="card-text">AKA Lady's Finger</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="cap.avif" alt="Orange" />
+                  <div class="card-body">
+                    <h5 class="card-title">Capsicum</h5>
+                    <p class="card-text">Restaurant-ish tarkari</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="saag1.avif" alt="Junaar" />
+                  <div class="card-body">
+                    <h5 class="card-title">Saag 1</h5>
+                    <p class="card-text">Good for eyes</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+                <div class="card mx-2">
+                  <img class="card-img-top" src="saag2.avif" alt="Kiwi" />
+                  <div class="card-body">
+                    <h5 class="card-title">Saag 2</h5>
+                    <p class="card-text">Good for eyes as well</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControlsVegetables"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControlsVegetables"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="customerReviews mt-2">
+        <div>
+          <h2 style="background: none" class="text-center">
+            Satisfied Customers
+          </h2>
+        </div>
+        <div class="row m-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img class="rounded-circle mx-auto" src="uday.jpeg" />
+              <div class="card-body">
+                <div class="card-title">
+                  <h3 class="text-center">Uday Bhai</h3>
+                </div>
+                <div class="card-text">
+                  <p class="text-center">Aalu...Lelooooo..</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img class="rounded-circle mx-auto" src="saiman.jpeg" />
+              <div class="card-body">
+                <div class="card-title">
+                  <h3 class="text-center">Saiman Says</h3>
+                </div>
+                <div class="card-text">
+                  <p class="text-center">Bhindi is good.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card">
+              <img class="rounded-circle mx-auto" src="pop.jpg" />
+              <div class="card-body">
+                <div class="card-title">
+                  <h3 class="text-center">Popeye</h3>
+                </div>
+                <div class="card-text">
+                  <p class="text-center">Ma yetai bata spinach kinchu.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <a href="#">Be a seller</a>
+        <a href="#">Report a Problem</a>
+        <a href="#">Bulk Orders</a>
+        <a href="#">Our Team</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </footer>
+  </body>
+</html>
