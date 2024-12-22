@@ -62,7 +62,7 @@
         height: 40px;
         width: 60px;
       }
-      .buyNow {
+      /* .buyNow {
         padding: 5px 25px;
         background-color: blue;
         color: white;
@@ -72,7 +72,7 @@
         background-color: white;
         color: blue;
         cursor: pointer;
-      }
+      } */
       .buyFruits {
         height: 600px;
         border: 1px solid green;
@@ -175,11 +175,13 @@
           background: white;
         }
       }
-      .card {
+      .buyFruits .card,
+      .buyVegetables .card {
         height: 60vh;
         width: 20vw;
       }
-      .card img {
+      .buyFruits .card img,
+      .buyVegetables .card img {
         height: 35vh;
       }
     </style>
@@ -211,7 +213,7 @@
           Freshly picked items from various parts of Nepal,<br />
           directly to your kitchen*.
         </p>
-        <button class="buyNow">Buy Now</button>
+        <button class="buyNow btn btn-primary">Buy Now</button>
       </div>
       <div class="buyFruits">
         <div>
