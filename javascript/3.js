@@ -73,3 +73,11 @@ for (key12 in info) {
 }
 
 // for..in loop
+//for..of loop
+
+let mynumber = 5;
+
+while (mynumber > 0) {
+  console.log(mynumber);
+  mynumber = mynumber - 1;
+}
