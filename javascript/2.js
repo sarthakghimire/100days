@@ -52,4 +52,4 @@ let array = [
 ];
 
 console.log(array.find((item) => item.id == 2).keywords);
-console.log();
+console.log(array.filter((item) => item.category == "Food"));

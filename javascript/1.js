@@ -58,4 +58,4 @@ array34 = ["a", "b", "c"];
 array56 = ["ram", "hari", ...array12, ...array34, ...array34];
 console.log(array56);
 
-//frequently used:
+//frequently used: map, foreach, filter, find
