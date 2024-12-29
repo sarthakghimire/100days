@@ -1,5 +1,6 @@
 //callback
 //asynchronous functions
+//promise
 
 const test = (greet, cb) => {
   console.log("Hello");
