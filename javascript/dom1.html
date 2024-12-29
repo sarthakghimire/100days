@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box" class="c">Hello</div>
+    <div id="box" class="c">Hello</div>
+    <div id="box" class="c">Hello</div>
+    <div id="box" class="c">Hello</div>
+
+    <script>
+      //   let box = document.getElementById("box");
+      //   box.style.color = "red";
+      //   box.style.backgroundImage = "linear-gradient(to right, yellow, orange)";
+
+      let card = document.getElementsByClassName("c");
+      for (let i = 0; i < card.length; i++) {
+        card[i].style.color = "red";
+        card[i].style.backgroundImage =
+          "linear-gradient(to right, yellow, orange)";
+      }
+    </script>
+  </body>
+</html>
