@@ -1,12 +1,12 @@
-let a = "Hello"; //global scope
+let a = "Hello";
 
 if (true) {
-  let b = 5; //local scope
-  const pi = 3.14; //local scope
-  var c = "World"; //worst of all
+  let b = 5;
+  const pi = 3.14;
+  var c = "World";
 }
 
-console.log(a);
-console.log(b);
-console.log(pi);
-console.log(c);
+console.log(a); //won't create any problem
+console.log(b); //creates problem
+console.log(pi); //creates problem
+console.log(c); //creates bigger problem

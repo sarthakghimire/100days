@@ -6,9 +6,9 @@
     <title>House</title>
     <style>
       .container {
-        height: 900px;
+        height: 1000px;
 
-        background-color: gray;
+        background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -18,13 +18,13 @@
         height: 0px;
         width: 0px;
         background-color: red;
-        border-bottom: 400px solid red;
-        border-left: 200px solid gray;
-        border-right: 200px solid gray;
+        border-bottom: 500px solid red;
+        border-left: 250px solid white;
+        border-right: 250px solid white;
       }
       .body {
         height: 400px;
-        width: 400px;
+        width: 500px;
         background-color: white;
         border: 2px solid black;
         display: flex;
@@ -35,7 +35,6 @@
         width: 105px;
         background-color: brown;
         display: flex;
-        flex-direction: column;
         align-self: flex-end;
       }
 
@@ -45,16 +44,32 @@
         border-radius: 50%;
         background-color: white;
       }
+      .nothing {
+        height: 150px;
+        width: 105px;
+        background-color: pink;
+        border-right: 1px solid purple;
+      }
+      .knob {
+        height: 150px;
+        width: 105px;
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="roof"></div>
-      <div class="body">
-        <div class="door">
-          <div class="nothing"></div>
-          <div class="knob">
-            <div class="realknob"></div>
+      <div class="house">
+        <div class="roof"></div>
+        <div class="body">
+          <div class="door">
+            <div class="nothing"></div>
+            <div class="knob">
+              <div class="realknob"></div>
+            </div>
           </div>
         </div>
       </div>
