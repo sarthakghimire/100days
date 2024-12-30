@@ -20,7 +20,7 @@
     }
   </style>
   <body>
-    <button class="btn" onclick="hidetext()">Hide</button>
+    <button id="btn" onclick="hidetext()">Hide</button>
     <p class="para" id="paragraph">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
       repudiandae neque voluptas illum necessitatibus, nihil libero cupiditate
@@ -30,10 +30,13 @@
     <script>
       function hidetext() {
         let toHide = document.getElementById("paragraph");
+        let btn = document.getElementById("btn");
         if (toHide.style.display == "none") {
           toHide.style.display = "block";
+          btn.textContent = "Hide";
         } else {
           toHide.style.display = "none";
+          btn.textContent = "Show";
         }
       }
     </script>
