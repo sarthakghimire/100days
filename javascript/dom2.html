@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle</title>
+  </head>
+  <style>
+    button:hover {
+      background-color: yellow;
+      color: blue;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <button
+      class="btn"
+      onclick="hidetext()"
+      style="
+        background-color: blue;
+        color: yellow;
+        padding: 5px 20px;
+        border-radius: 20px;
+      "
+    >
+      Click To Toggle
+    </button>
+    <p class="para" id="paragraph">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+      repudiandae neque voluptas illum necessitatibus, nihil libero cupiditate
+      ipsam eos blanditiis amet vitae explicabo inventore eaque dolorum esse,
+      fuga eum ex?
+    </p>
+    <script>
+      function hidetext() {
+        let toHide = document.getElementById("paragraph");
+        if (toHide.style.display == "none") {
+          toHide.style.display = "block";
+        } else {
+          toHide.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
