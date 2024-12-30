@@ -6,6 +6,13 @@
     <title>Toggle</title>
   </head>
   <style>
+    button {
+      background-color: blue;
+      color: yellow;
+      padding: 5px 20px;
+      border-radius: 20px;
+    }
+
     button:hover {
       background-color: yellow;
       color: blue;
@@ -13,18 +20,7 @@
     }
   </style>
   <body>
-    <button
-      class="btn"
-      onclick="hidetext()"
-      style="
-        background-color: blue;
-        color: yellow;
-        padding: 5px 20px;
-        border-radius: 20px;
-      "
-    >
-      Click To Toggle
-    </button>
+    <button class="btn" onclick="hidetext()">Hide</button>
     <p class="para" id="paragraph">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
       repudiandae neque voluptas illum necessitatibus, nihil libero cupiditate
