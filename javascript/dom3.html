@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .child {
+        height: 200px;
+        width: 200px;
+        border: 3px solid gray;
+        border-radius: 3px;
+        margin: 10px;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .addedChild {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="child" id="child1" onclick="makePrimary()">Hi</button>
+      <button class="child" id="child2" onclick="makePrimary()">Hi</button>
+      <button class="child" id="child3" onclick="makePrimary()">Hi</button>
+      <button class="child" id="child4" onclick="makePrimary()">Hi</button>
+      <button class="child" id="child5" onclick="makePrimary()">Hi</button>
+    </div>
+    <script>
+      function makePrimary() {
+        let btn = document.getElementsByClassName("child");
+        btn.classList.add("addedChild");
+      }
+    </script>
+  </body>
+</html>
