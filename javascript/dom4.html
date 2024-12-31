@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppendChild Function</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading"></div>
+    </div>
+    <p id="para">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime sapiente,
+      alias similique laudantium neque tempore consectetur, adipisci nisi rerum
+      eligendi, deleniti esse quos dolore tempora. Molestiae ipsa quam velit
+      quaerat!
+    </p>
+
+    <script>
+      const node = document.createElement("h1");
+      document.querySelector(".heading").appendChild(node);
+      node.innerText = "This is header";
+    </script>
+  </body>
+</html>

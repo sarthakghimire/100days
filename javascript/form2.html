@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Form</title>
+    <style>
+      div {
+        height: 500px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid gray;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, red, rgb(255, 100, 20));
+      }
+      form {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <input
+          type="text"
+          name="Fname"
+          id="Fname"
+          placeholder="Enter First Name:"
+          required
+          min="10"
+        />
+        <input
+          type="text"
+          name="Lname"
+          id="Lname"
+          placeholder="Enter Lastr Name:"
+          required
+          min="10"
+        />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter e-mail address:"
+          required
+        />
+      </form>
+    </div>
+  </body>
+</html>

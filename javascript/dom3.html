@@ -16,6 +16,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
       }
       .addedChild {
         background-color: red;
@@ -24,11 +25,21 @@
   </head>
   <body>
     <div class="container">
-      <button class="child" id="child1" onclick="makePrimary()">Hi</button>
-      <button class="child" id="child2" onclick="makePrimary()">Hi</button>
-      <button class="child" id="child3" onclick="makePrimary()">Hi</button>
-      <button class="child" id="child4" onclick="makePrimary()">Hi</button>
-      <button class="child" id="child5" onclick="makePrimary()">Hi</button>
+      <button class="child" id="child1" onclick="makePrimary()">
+        Click Me
+      </button>
+      <button class="child" id="child2" onclick="makePrimary()">
+        Click Me
+      </button>
+      <button class="child" id="child3" onclick="makePrimary()">
+        Click Me
+      </button>
+      <button class="child" id="child4" onclick="makePrimary()">
+        Click Me
+      </button>
+      <button class="child" id="child5" onclick="makePrimary()">
+        Click Me
+      </button>
     </div>
     <script>
       function makePrimary() {

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" name="name" id="name" placeholder="Enter Name:" />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Enter Password:"
+    />
+    <button id="btn" type="submit" onsubmit="">Submit</button>
+    <div class="container"></div>
+
+    <script>
+      //   function showDetails() {
+      //     const name = document.getElementById("name").value;
+      //     const password = document.getElementById("password").value;
+
+      //     const node1 = document.createElement("p");
+      //     node1.innerText = name;
+      //     document.querySelector(".container").appendChild("node1");
+      //     const node2 = document.createElement("p");
+      //     node2.innerText = password;
+      //     document.querySelector(".container").appendChild("node2");
+      //   }
+
+      document.getElementById("btn").addEventListener("click", () => {
+        const name = document.getElementById("name").value;
+        const password = document.getElementById("password").value;
+        const display = document.createElement("div");
+        display.innerText = `Name:${name} and Password:${password}`;
+        document.body.appendChild(display);
+      });
+    </script>
+  </body>
+</html>
