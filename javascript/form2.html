@@ -5,18 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Form</title>
     <style>
-      div {
-        height: 500px;
-        width: 500px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid gray;
-        border-radius: 5px;
-        background-image: linear-gradient(to right, red, rgb(255, 100, 20));
-      }
-      form {
-        color: white;
+      input,
+      select {
+        padding: 5px 20px;
+        margin: 5px;
+        border-radius: 20px;
       }
     </style>
   </head>
@@ -28,25 +21,83 @@
           name="Fname"
           id="Fname"
           placeholder="Enter First Name:"
-          required
-          min="10"
-        />
+        /><br />
         <input
           type="text"
           name="Lname"
           id="Lname"
-          placeholder="Enter Lastr Name:"
-          required
-          min="10"
-        />
+          placeholder="Enter Last Name:"
+        /><br />
         <input
           type="email"
           name="email"
           id="email"
-          placeholder="Enter e-mail address:"
-          required
-        />
+          placeholder="Enter e-mail Address:"
+        /><br />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Create Password"
+        /><br />
+        <input
+          type="password"
+          name="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+        /><br />
+        <input
+          type="number"
+          name="age"
+          id="age"
+          placeholder="Enter age:"
+        /><br />
+        Gender:<select id="selectGender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="none">Prefer Not to Say</option></select
+        ><br />
+        <input type="checkbox" name="checkbox" id="checkbox" /> I agree to all
+        Terms & Conditions<br />
+        <input type="submit" />
       </form>
     </div>
+    <script>
+      const Fname = document.getElementById("Fname");
+      const Lname = document.getElementById("Lname");
+      const email = document.getElementById("email");
+      const password = document.getElementById("password");
+      const confirmPassword = document.getElementById("confirmPassword");
+      const age = document.getElementById("age");
+      const gender = document.getElementById("selectGender").value;
+      const checkbox = document.getElementById("checkbox").checked;
+
+      let errors = [];
+
+      if (Fname.length < 10) {
+        errors.push("Name should be 10 characters long");
+      }
+      if (Lname.length < 10) {
+        errors.push("Last Name should be 10 characters long");
+      }
+      if (password.length < 10) {
+        errors.push("Password should be 10 characters long");
+      }
+      if (password !== confirmPassword) {
+        errors.push("Passwords don't match");
+      }
+      if (age < 18) {
+        errors.push("You are not eligibled");
+      }
+      if (!checkbox) {
+        errors.push("Please agree to Terms and Conditions");
+      }
+
+      if (errors.length > 0) {
+        alert(errors);
+      } else {
+        alert("Successful");
+      }
+    </script>
   </body>
 </html>
