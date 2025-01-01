@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="container">
-      <form>
+      <form id="myForm">
         <input
           type="text"
           name="Fname"
@@ -52,54 +52,61 @@
           id="age"
           placeholder="Enter age:"
         /><br />
-        Gender:<select id="selectGender">
+        Gender:
+        <select id="selectGender">
           <option value="male">Male</option>
           <option value="female">Female</option>
-          <option value="none">Prefer Not to Say</option></select
-        ><br />
+          <option value="none">Prefer Not to Say</option>
+        </select>
+        <br />
         <input type="checkbox" name="checkbox" id="checkbox" /> I agree to all
         Terms & Conditions<br />
         <input type="submit" />
       </form>
     </div>
     <script>
-      const Fname = document.getElementById("Fname");
-      const Lname = document.getElementById("Lname");
-      const email = document.getElementById("email");
-      const password = document.getElementById("password");
-      const confirmPassword = document.getElementById("confirmPassword");
-      const age = document.getElementById("age");
-      const gender = document.getElementById("selectGender").value;
-      const checkbox = document.getElementById("checkbox");
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-      let errors = [];
+          const Fname = document.getElementById("Fname").value;
+          const Lname = document.getElementById("Lname").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+          const age = document.getElementById("age").value;
+          const gender = document.getElementById("selectGender").value;
+          const checkbox = document.getElementById("checkbox").checked;
 
-      if (Fname.length < 10) {
-        errors.push("Name should be 10 characters long");
-      }
-      if (Lname.length < 10) {
-        errors.push("Last Name should be 10 characters long");
-      }
-      if (password.length < 10) {
-        errors.push("Password should be 10 characters long");
-      }
-      if (password !== confirmPassword) {
-        errors.push("Passwords don't match");
-      }
-      if (age < 18) {
-        errors.push("You are not eligible");
-      }
-      if (checkbox.checked) {
-        errors.push("Please agree to Terms and Conditions");
-      }
+          let errors = [];
 
-      if (errors.length > 0) {
-        alert(errors.join("\n"));
-      } else {
-        alert("Successful");
-      }
+          if (Fname.length < 10) {
+            errors.push("First Name should be at least 10 characters long");
+          }
+          if (Lname.length < 10) {
+            errors.push("Last Name should be at least 10 characters long");
+          }
+          if (password.length < 10) {
+            errors.push("Password should be at least 10 characters long");
+          }
+          if (password !== confirmPassword) {
+            errors.push("Passwords do not match");
+          }
+          if (age < 18) {
+            errors.push("You must be at least 18 years old");
+          }
+          if (!checkbox) {
+            errors.push("Please agree to the Terms and Conditions");
+          }
+
+          if (errors.length > 0) {
+            alert(errors.join("\n"));
+          } else {
+            alert("Form validated successfully");
+          }
+        });
     </script>
   </body>
 </html>
-
-<!-- local storage form validation -->
