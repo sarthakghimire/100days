@@ -70,7 +70,7 @@
       const confirmPassword = document.getElementById("confirmPassword");
       const age = document.getElementById("age");
       const gender = document.getElementById("selectGender").value;
-      const checkbox = document.getElementById("checkbox").checked;
+      const checkbox = document.getElementById("checkbox");
 
       let errors = [];
 
@@ -87,14 +87,14 @@
         errors.push("Passwords don't match");
       }
       if (age < 18) {
-        errors.push("You are not eligibled");
+        errors.push("You are not eligible");
       }
-      if (!checkbox) {
+      if (checkbox.checked) {
         errors.push("Please agree to Terms and Conditions");
       }
 
       if (errors.length > 0) {
-        alert(errors);
+        alert(errors.join("\n"));
       } else {
         alert("Successful");
       }
