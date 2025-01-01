@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gai Ki Trishul</title>
+    <style>
+      img {
+        height: 500px;
+        width: 500px;
+      }
+      img#heads {
+        position: absolute;
+        top: 0%;
+        left: -10%;
+        z-index: 2;
+      }
+      img#tails {
+        position: absolute;
+        top: 0%;
+        left: -10%;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flip the coin. Loser pays the bill.</h1>
+    <div class="container">
+      <div class="coin">
+        <img id="heads" src="../coinFlip/materials/heads.png" />
+        <img id="tails" src="../coinFlip/materials/tails.png" />
+      </div>
+      <div class="button">
+        <button class="btn" onclick="flipCoin()">Flip</button>
+      </div>
+    </div>
+    <script>
+      function flipCoin() {
+        let heads = document.getElementById("heads");
+        let tails = document.getElementById("tails");
+        let randomNumber = Math.floor(Math.random() * 100) % 2;
+        if (randomNumber == 0) {
+          heads.style.zIndex = "2";
+          tails.style.zIndex = "1";
+        } else {
+          heads.style.zIndex = "1";
+          tails.style.zIndex = "2";
+        }
+      }
+    </script>
+  </body>
+</html>
