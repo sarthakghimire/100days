@@ -37,6 +37,55 @@
     .container {
       height: 700px;
       background-color: var(--secondary);
+      display: flex;
+      justify-content: space-around;
+    }
+    .container .left {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .container .right {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      /* align-items: center; */
+      flex-direction: column;
+    }
+    .container .left .leftchild {
+      width: 85%;
+      height: 85%;
+      background-color: var(--primary);
+      border-radius: 10px;
+    }
+    .container .right .topRight {
+      height: 45%;
+      width: 80%;
+      background-color: var(--primary);
+      border-radius: 10px;
+      margin-top: 50px;
+    }
+    .container .right .bottomRight {
+      margin-top: 20px;
+      height: 45%;
+      width: 80%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .container .right .bottomRight .br1,
+    .container .right .bottomRight .br2 {
+      height: 45%;
+      width: 80%;
+      margin: 2px;
+      background-color: var(--primary);
+      border-radius: 10px;
+    }
+    .container .right .text h1 {
+      margin-bottom: 55px;
+      color: var(--primary);
     }
   </style>
   <body>
@@ -46,18 +95,32 @@
       <li><a href="#">Contact Us</a></li>
       <li><a href="#">FAQs</a></li>
       <li>
-        <a href="#"><button id="button">Dark Mode</button></a>
+        <a href="#"><button id="button">Switch to Dark Mode</button></a>
       </li>
     </ul>
-    <div class="container"></div>
+    <div class="container">
+      <div class="left">
+        <div class="leftchild"></div>
+      </div>
+      <div class="right">
+        <div class="topRight"></div>
+        <div class="bottomRight">
+          <div class="br1"></div>
+          <div class="br2"></div>
+        </div>
+        <div class="text">
+          <h1>Experience Shopping Like Never Before</h1>
+        </div>
+      </div>
+    </div>
     <script>
       const button = document.getElementById("button");
       button.onclick = function () {
         document.body.classList.toggle("dark-mode");
         if (document.body.classList.contains("dark-mode")) {
-          document.getElementById("button").innerHTML = "Light Mode";
+          document.getElementById("button").innerHTML = "Switch to Light Mode";
         } else {
-          document.getElementById("button").innerHTML = "Dark Mode";
+          document.getElementById("button").innerHTML = "Switch to Dark Mode";
         }
       };
     </script>
