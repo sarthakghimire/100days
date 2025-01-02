@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What time is it?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: "VT323", monospace;
+
+        font-size: 75px;
+        color: red;
+      }
+
+      /* body {
+        background-image: linear-gradient(
+          to right,
+          rgb(50, 50, 200),
+          rgb(70, 70, 244)
+        );
+      } */
+      .container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .clock {
+        height: 200px;
+        width: 400px;
+        /* border-radius: 20px; */
+        background-image: linear-gradient(to right, #73c8a9, #373b44);
+        /* position: absolute;
+        top: 40%;
+        right: 40%; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+      }
+      .sunMoon {
+        position: absolute;
+        right: 20%;
+        height: 160px;
+        width: 160px;
+        background-color: yellow;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sunMoon"></div>
+    <div class="container">
+      <div class="clock">
+        <div id="time"></div>
+        <div id="day"></div>
+        <div class="date"></div>
+      </div>
+    </div>
+    <script>
+      function whatTime() {
+        const d = new Date();
+        document.getElementById("time").innerHTML =
+          d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        const day = d.getDay();
+        switch (day) {
+          case 0:
+            document.getElementById("day").innerHTML = "Sunday";
+            break;
+          case 1:
+            document.getElementById("day").innerHTML = "Monday";
+            break;
+          case 2:
+            document.getElementById("day").innerHTML = "Tuesday";
+            break;
+          case 3:
+            document.getElementById("day").innerHTML = "Wednesday";
+            break;
+          case 4:
+            document.getElementById("day").innerHTML = "Thursday";
+            break;
+          case 5:
+            document.getElementById("day").innerHTML = "Friday";
+            break;
+          case 6:
+            document.getElementById("day").innerHTML = "Saturday";
+            break;
+          default:
+            document.getElementById("day").innerHTML = "Something's Wrong";
+        }
+        let hours = d.getHours();
+        if (hours >= 6 && hours <= 17) {
+          document.body.style.backgroundImage =
+            "linear-gradient(to right,skyblue, white)";
+          document.getElementsByClassName("sunMoon")[0].style.backgroundColor =
+            "yellow";
+        } else {
+          document.body.style.backgroundImage =
+            "linear-gradient(to right, black, gray)";
+          document.getElementsByClassName("sunMoon")[0].style.backgroundImage =
+            "linear-gradient(to right, white, gray)";
+        }
+      }
+      whatTime();
+      setInterval(whatTime, 1000);
+    </script>
+  </body>
+</html>
