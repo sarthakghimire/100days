@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mode toggler</title>
+  </head>
+  <style>
+    :root {
+      --primary: rgb(31, 31, 31);
+      --secondary: rgb(224, 224, 224);
+    }
+    .dark-mode {
+      --secondary: rgb(31, 31, 31);
+      --primary: rgb(224, 224, 224);
+    }
+    h1 {
+      background-color: var(--secondary);
+      color: var(--primary);
+    }
+    #button {
+      padding: 5px 20px;
+      border-radius: 20px;
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      background-color: var(--secondary);
+    }
+    ul li a {
+      text-decoration: none;
+      color: var(--primary);
+    }
+    .container {
+      height: 700px;
+      background-color: var(--secondary);
+    }
+  </style>
+  <body>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li>
+        <a href="#"><button id="button">Dark Mode</button></a>
+      </li>
+    </ul>
+    <div class="container"></div>
+    <script>
+      const button = document.getElementById("button");
+      button.onclick = function () {
+        document.body.classList.toggle("dark-mode");
+        if (document.body.classList.contains("dark-mode")) {
+          document.getElementById("button").innerHTML = "Light Mode";
+        } else {
+          document.getElementById("button").innerHTML = "Dark Mode";
+        }
+      };
+    </script>
+  </body>
+</html>
