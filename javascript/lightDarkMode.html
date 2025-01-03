@@ -51,7 +51,7 @@
       width: 50%;
       height: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       /* align-items: center; */
       flex-direction: column;
     }
@@ -62,18 +62,19 @@
       border-radius: 10px;
     }
     .container .right .topRight {
-      height: 45%;
-      width: 80%;
+      height: 100%;
+      width: 100%;
       background-color: var(--primary);
       border-radius: 10px;
       margin-top: 50px;
     }
     .container .right .bottomRight {
       margin-top: 20px;
-      height: 45%;
-      width: 80%;
+      height: 100%;
+      width: 100%;
       display: flex;
       justify-content: space-around;
+      align-items: stretch;
     }
     .container .right .bottomRight .br1,
     .container .right .bottomRight .br2 {
@@ -89,6 +90,28 @@
     }
     .container .right .text {
       margin-top: 25px;
+    }
+    .container .right .midRight {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0px;
+    }
+    .container .right .midRight .mr1 {
+      height: 100%;
+      width: 60%;
+      background-color: var(--primary);
+      border-radius: 10px;
+      margin: 0px 0px 10px 0px;
+    }
+    .container .right .midRight .mr2 {
+      height: 100%;
+      width: 40%;
+      background-color: var(--primary);
+      border-radius: 10px;
+      margin: 0px 0px 0px 10px;
     }
   </style>
   <body>
@@ -106,10 +129,11 @@
         <div class="leftchild"></div>
       </div>
       <div class="right">
-        <div class="text">
-          <h1>Experience Shopping Like Never Before</h1>
-        </div>
         <div class="topRight"></div>
+        <div class="midRight">
+          <div class="mr1"></div>
+          <div class="mr2"></div>
+        </div>
         <div class="bottomRight">
           <div class="br1"></div>
           <div class="br2"></div>
