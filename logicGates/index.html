@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logic Gates</title>
+    <style>
+      :root {
+        --zero: grey;
+        --one: yellow;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .gate {
+        height: 100px;
+        width: 150px;
+        background-color: antiquewhite;
+        margin: 20px;
+      }
+      .myButton {
+        height: 20px;
+        width: 20px;
+        margin: 15px;
+        background-color: var(--zero);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttons">
+      <button id="low" class="myButton"></button>
+      <button id="high" class="myButton"></button>
+    </div>
+    <div class="container">
+      <div class="gate" id="and"></div>
+      <div class="gate" id="or"></div>
+      <div class="gate" id="not"></div>
+      <div class="gate" id="xor"></div>
+      <div class="gate" id="xnor"></div>
+    </div>
+  </body>
+</html>
