@@ -4,11 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logic Gates</title>
+    <!-- <script src="script.js"></script> -->
     <style>
-      :root {
-        --zero: grey;
-        --one: yellow;
-      }
       .container {
         display: flex;
         justify-content: center;
@@ -25,23 +22,67 @@
         height: 20px;
         width: 20px;
         margin: 15px;
-        background-color: var(--zero);
+        background-color: grey;
         border-radius: 50%;
         cursor: pointer;
+      }
+      .Parent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #notOutput button {
+        background-color: yellow;
       }
     </style>
   </head>
   <body>
     <div class="buttons">
-      <button id="low" class="myButton"></button>
-      <button id="high" class="myButton"></button>
+      <button
+        id="low"
+        class="myButton clickable"
+        onclick="switchColor()"
+      ></button>
+      <button
+        id="high"
+        class="myButton clickable"
+        onclick="switchColor()"
+      ></button>
     </div>
     <div class="container">
-      <div class="gate" id="and"></div>
-      <div class="gate" id="or"></div>
-      <div class="gate" id="not"></div>
-      <div class="gate" id="xor"></div>
-      <div class="gate" id="xnor"></div>
+      <div class="Parent">
+        <div class="gate" id="and"></div>
+        <div id="andOutput"><button class="myButton"></button></div>
+      </div>
+      <div class="Parent">
+        <div class="gate" id="or"></div>
+        <div id="orOutput"><button class="myButton"></button></div>
+      </div>
+      <div class="Parent">
+        <div class="gate" id="not"></div>
+        <div id="notOutput"><button class="myButton"></button></div>
+      </div>
+      <div class="Parent">
+        <div class="gate" id="xor"></div>
+        <div id="xorOutput"><button class="myButton"></button></div>
+      </div>
+      <div class="Parent">
+        <div class="gate" id="xnor"></div>
+        <div id="xnorOutput"><button class="myButton"></button></div>
+      </div>
     </div>
+    <script>
+      function switchColor(button) {
+        const buttons = document.getElementsByClassName("clickable");
+
+        for (let i = 0; i < buttons.length; i++) {
+          if (buttons[i].style.backgroundColor == "yellow") {
+            buttons[i].style.backgroundColor = "gray";
+          } else {
+            buttons[i].style.backgroundColor = "yellow";
+          }
+        }
+      }
+    </script>
   </body>
 </html>
