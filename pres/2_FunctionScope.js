@@ -9,7 +9,7 @@ function testScope() {
     console.log("Inside if block," + c);
   }
 
-  //console.log("Outside if block," + a);
+  console.log("Outside if block," + a);
   console.log("Outside if block," + b);
   //console.log("Outside if block," + c);
 }
