@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Election Results</title>
+    <style>
+      * {
+        margin: 4px;
+      }
+      .container {
+        width: 500px;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        border: 2px solid grey;
+        border-radius: 3px;
+      }
+      img {
+        height: 40px;
+        width: 40px;
+        border-radius: 3px;
+      }
+      .progress {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 50%;
+      }
+      .party {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+      }
+      .bar {
+        height: 10px;
+        width: 90%;
+        border: 1px solid black;
+      }
+      .fill {
+        position: relative;
+        top: -4px;
+        left: -5px;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="party" id="congress">
+        <div class="logo">
+          <img src="../chunab/assets/congress.png" />
+        </div>
+        <div class="progress">
+          <div class="name">Nepali Congress</div>
+          <div class="bar">
+            <div class="fill" style="background-color: green"></div>
+          </div>
+        </div>
+        <div class="votes">40.2</div>
+        <div class="seats"></div>
+      </div>
+      <div class="party" id="uml">
+        <div class="logo"><img src="../chunab/assets/uml.png" /></div>
+        <div class="progress">
+          <div class="name">CPN UML</div>
+          <div class="bar">
+            <div class="fill" style="background-color: red"></div>
+          </div>
+        </div>
+        <div class="votes">42.2</div>
+        <div class="seats"></div>
+      </div>
+      <div class="party" id="mao">
+        <div class="logo"><img src="../chunab/assets/mao.png" /></div>
+        <div class="progress">
+          <div class="name">CPN Maoist</div>
+          <div class="bar">
+            <div class="fill" style="background-color: rgb(160, 44, 44)"></div>
+          </div>
+        </div>
+        <div class="votes">10.5</div>
+        <div class="seats"></div>
+      </div>
+      <div class="party" id="jsp">
+        <div class="logo"><img src="../chunab/assets/jsp.png" /></div>
+        <div class="progress">
+          <div class="name">JSP</div>
+          <div class="bar">
+            <div
+              class="fill"
+              style="background-color: rgb(158, 104, 104)"
+            ></div>
+          </div>
+        </div>
+        <div class="votes">2.9</div>
+        <div class="seats"></div>
+      </div>
+      <div class="party" id="us">
+        <div class="logo"><img src="../chunab/assets/us.png" /></div>
+        <div class="progress">
+          <div class="name">CPN US</div>
+          <div class="bar">
+            <div class="fill" style="background-color: rgb(255, 50, 50)"></div>
+          </div>
+        </div>
+        <div class="votes">2.7</div>
+        <div class="seats"></div>
+      </div>
+      <div class="party" id="lsp">
+        <div class="logo"><img src="../chunab/assets/losapa.png" /></div>
+        <div class="progress">
+          <div class="name">LSP</div>
+          <div class="bar">
+            <div class="fill" style="background-color: brown"></div>
+          </div>
+        </div>
+        <div class="votes">1.5</div>
+        <div class="seats"></div>
+      </div>
+    </div>
+    <script>
+      const votes = document.getElementsByClassName("votes");
+      for (let i = 0; i < votes.length; i++) {
+        const votesPercent = parseFloat(votes[i].textContent.trim());
+        const seatCount = Math.floor((votesPercent / 100) * 110);
+        document.getElementsByClassName("seats")[i].textContent = seatCount;
+        document.getElementsByClassName("fill")[
+          i
+        ].style.width = `${votesPercent}%`;
+      }
+    </script>
+  </body>
+</html>
