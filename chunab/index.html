@@ -44,7 +44,8 @@
         left: -5px;
         height: 100%;
       }
-      .header {
+      .header,
+      .footer {
         width: 500px;
         height: auto;
         display: flex;
@@ -68,7 +69,7 @@
     <div class="container">
       <div class="party" id="congress">
         <div class="logo">
-          <img src="../chunab/assets/congress.png" />
+          <img src="./assets/congress.png" />
         </div>
         <div class="progress">
           <div class="name">Nepali Congress</div>
@@ -80,7 +81,7 @@
         <div class="seats"></div>
       </div>
       <div class="party" id="uml">
-        <div class="logo"><img src="../chunab/assets/uml.png" /></div>
+        <div class="logo"><img src="./assets/uml.png" /></div>
         <div class="progress">
           <div class="name">CPN UML</div>
           <div class="bar">
@@ -91,7 +92,7 @@
         <div class="seats"></div>
       </div>
       <div class="party" id="mao">
-        <div class="logo"><img src="../chunab/assets/mao.png" /></div>
+        <div class="logo"><img src="./assets/mao.png" /></div>
         <div class="progress">
           <div class="name">CPN Maoist</div>
           <div class="bar">
@@ -102,7 +103,7 @@
         <div class="seats"></div>
       </div>
       <div class="party" id="jsp">
-        <div class="logo"><img src="../chunab/assets/jsp.png" /></div>
+        <div class="logo"><img src="./assets/jsp.png" /></div>
         <div class="progress">
           <div class="name">JSP</div>
           <div class="bar">
@@ -116,7 +117,7 @@
         <div class="seats"></div>
       </div>
       <div class="party" id="us">
-        <div class="logo"><img src="../chunab/assets/us.png" /></div>
+        <div class="logo"><img src="./assets/us.png" /></div>
         <div class="progress">
           <div class="name">CPN US</div>
           <div class="bar">
@@ -127,7 +128,7 @@
         <div class="seats"></div>
       </div>
       <div class="party" id="lsp">
-        <div class="logo"><img src="../chunab/assets/losapa.png" /></div>
+        <div class="logo"><img src="./assets/losapa.png" /></div>
         <div class="progress">
           <div class="name">LSP</div>
           <div class="bar">
@@ -138,22 +139,28 @@
         <div class="seats"></div>
       </div>
     </div>
-    <div class="header">
+    <div class="footer">
       <p></p>
       <p></p>
-      <p style="padding-left: 40px">100</p>
-      <p>107</p>
+      <p style="padding-left: 40px" id="totPer"></p>
+      <p id="totSeats"></p>
     </div>
     <script>
       const votes = document.getElementsByClassName("votes");
+      let per = 0;
+      let seats = 0;
       for (let i = 0; i < votes.length; i++) {
         const votesPercent = parseFloat(votes[i].textContent.trim());
-        const seatCount = Math.floor((votesPercent / 100) * 110);
+        per = per + votesPercent;
+        const seatCount = Math.round((votesPercent / 100) * 110);
+        seats = seats + seatCount;
         document.getElementsByClassName("seats")[i].textContent = seatCount;
         document.getElementsByClassName("fill")[
           i
         ].style.width = `${votesPercent}%`;
       }
+      document.getElementById("totPer").innerHTML = per.toFixed(0);
+      document.getElementById("totSeats").innerHTML = seats;
     </script>
   </body>
 </html>
