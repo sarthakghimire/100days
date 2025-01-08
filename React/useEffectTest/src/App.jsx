@@ -8,7 +8,7 @@ import VIP from "./hie/VIP.png";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <Card
         image={salesman}
         name="Salesman"
@@ -39,7 +39,7 @@ function App() {
         name="VIPs"
         description="Basically the rich sadist relatives we have around us."
       />
-    </>
+    </div>
   );
 }
 

@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: space-around;
+  flex-direction: row-reverse;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
