@@ -1,14 +1,9 @@
-import Card from "./assets/Card.jsx";
-import salesman from "./hie/salesman.png";
-import circle from "./hie/circle.png";
-import triangle from "./hie/triangle.png";
-import square from "./hie/square.png";
-import frontman from "./hie/frontman.png";
-import VIP from "./hie/VIP.png";
+import React from "react";
+import { useParams } from "react-router-dom";
 
-// useNavigate vs <NavLink>
+const ReadMore = () => {
+  const params = useParams();
 
-const App = () => {
   const data = [
     {
       id: 1,
@@ -50,20 +45,14 @@ const App = () => {
       description: "Basically the rich sadist relatives we have around us.",
     },
   ];
+  const singleData = data.find((item) => item.id == params.id);
+
   return (
-    <div className="container">
-      {data.map((item) => {
-        return (
-          <Card
-            key={item.name}
-            image={item.image}
-            name={item.name}
-            description={item.description}
-          />
-        );
-      })}
-    </div>
+    <>
+      <h1>Hello</h1>
+      <img />
+      <h2>{singleData.title}</h2>
+      <p>{singleData.description}</p>
+    </>
   );
 };
-
-export default App;
