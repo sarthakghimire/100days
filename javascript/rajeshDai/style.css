@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 400px;
+  width: 800px;
+  background-image: linear-gradient(
+    to left,
+    rgb(191, 184, 184),
+    rgb(30, 30, 30)
+  );
+  border-radius: 10px;
+}
+.top {
+  display: flex;
+}
+.top img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  padding-right: 30px;
+}
+.top h1 {
+  display: inline;
+  color: whitesmoke;
+}
+.quote {
+  font-size: 40px;
+  background-color: white;
+  height: 50px;
+  width: 600px;
+}
+button {
+  cursor: pointer;
+}
+.generate {
+  padding: 5px 20px;
+  background-color: red;
+  border-radius: 20px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
