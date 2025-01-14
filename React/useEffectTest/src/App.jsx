@@ -35,13 +35,13 @@ const App = () => {
       image: square,
       name: "Pink Square Guards",
       description:
-        "They are armed and can command the other 2 guards. They report to the frontman. (Naradmuni).",
+        "They are armed and can command the other 2 guards. They report to the frontman.",
     },
     {
       id: 5,
       image: frontman,
       name: "The Frontman",
-      description: "He shot is own brother. Don't expect much from him.",
+      description: "He shot his own brother. Don't expect much from him.",
     },
     {
       id: 6,
