@@ -33,6 +33,7 @@ body {
   margin: 10px;
 }
 form .display {
+  background-color: black;
   display: flex;
   justify-content: flex-end;
   margin: 20px 0px;
