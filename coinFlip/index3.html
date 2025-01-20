@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip the coin</title>
+    <style>
+      .container {
+        position: relative;
+        width: 500px;
+        margin: 20px auto;
+        text-align: center;
+      }
+      .coin {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 0 auto;
+        transform-style: preserve-3d;
+      }
+      img {
+        height: 400px;
+        width: 400px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+      }
+      img#heads {
+        z-index: 2;
+      }
+      img#tails {
+        transform: rotateY(180deg);
+        z-index: 1;
+      }
+      button {
+        padding: 10px 30px;
+        border-radius: 20px;
+        margin: 20px 0;
+        font-size: 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      #history {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        max-width: 80%;
+        margin: 20px auto;
+        word-wrap: break-word;
+      }
+      .disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Flip the coin. Loser pays the bill.</h1>
+      <div class="coin">
+        <img id="heads" src="materials/heads.png" alt="heads" />
+        <img id="tails" src="materials/tails.png" alt="tails" />
+      </div>
+      <button type="button" class="btn" onclick="flipCoin()">Flip</button>
+      <div id="history">
+        <h3>Flip History:</h3>
+        <p id="results"></p>
+      </div>
+    </div>
+
+    <script>
+      let flips = [];
+      let isAnimating = false;
+      let currentRotation = 0;
+
+      function flipCoin() {
+        if (isAnimating) return;
+
+        const coin = document.querySelector(".coin");
+        const btn = document.querySelector(".btn");
+        isAnimating = true;
+        btn.classList.add("disabled");
+
+        coin.style.transition = "none";
+        coin.style.transform = `rotateY(${currentRotation}deg)`;
+
+        void coin.offsetWidth;
+
+        let randomNumber = Math.floor(Math.random() * 2);
+        let rotations = 5;
+        currentRotation += rotations * 360 + (randomNumber === 1 ? 180 : 0);
+
+        coin.style.transition = "transform 1s ease-in-out";
+        coin.style.transform = `rotateY(${currentRotation}deg)`;
+
+        setTimeout(() => {
+          flips.push(randomNumber === 0 ? "H" : "T");
+          document.getElementById("results").textContent = flips.join(", ");
+
+          isAnimating = false;
+          btn.classList.remove("disabled");
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
