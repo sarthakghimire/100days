@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  left: 40%;
+  height: 600px;
+  border: 1 px solid gray;
+  width: 400px;
+  background-image: linear-gradient(
+    to left,
+    rgb(100, 100, 255),
+    rgb(50, 50, 255)
+  );
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+input {
+  width: 20%;
+  height: 25px;
+}
+
+button {
+  width: 20%;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin: 15px 0px;
+  border-radius: 10px;
+  text-align: center;
+}
