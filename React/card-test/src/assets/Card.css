@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 300px;
+  border: 1px solid gray;
+  background-color: rgb(136, 174, 174);
+  border-radius: 10px;
+}
+
+.container h1 {
+  color: white;
+  font-weight: bold;
+}
