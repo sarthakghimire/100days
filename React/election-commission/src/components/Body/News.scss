@@ -1,0 +1,12 @@
+.news-and-notices {
+  height: 350px;
+  background-color: rgba($color: #b3b3b3, $alpha: 0.5);
+  display: flex;
+  flex-direction: column;
+
+  .articles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

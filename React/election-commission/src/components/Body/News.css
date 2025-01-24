@@ -1,0 +1,11 @@
+.news-and-notices {
+  height: 350px;
+  background-color: rgba(179, 179, 179, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+.news-and-notices .articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}/*# sourceMappingURL=News.css.map */

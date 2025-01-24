@@ -1,0 +1,13 @@
+.newsArticle {
+  height: 80%;
+  width: 200px;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
