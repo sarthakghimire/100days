@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  .top {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mid {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      h1 {
+        color: red;
+      }
+      p {
+        color: gray;
+        font-size: 25px;
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(18, 38, 108);
+    height: 40px;
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: larger;
+    }
+  }
+}

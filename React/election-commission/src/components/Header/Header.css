@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.header .top {
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .top .mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.header .top .mid h1 {
+  color: red;
+}
+.header .top .mid p {
+  color: gray;
+  font-size: 25px;
+}
+.header .bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(18, 38, 108);
+  height: 40px;
+}
+.header .bottom a {
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}/*# sourceMappingURL=Header.css.map */

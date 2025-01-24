@@ -1,10 +1,16 @@
-// import { useState } from "react";
-// import Quiz from "./Quiz";
+import React from "react";
+import Header from "./components/Header/Header";
+import Body from "./components/Body/Body";
+import Footer from "./components/Footer/Footer";
 
-// function App() {
-//   <div>
-//     <Quiz />
-//   </div>;
-// }
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Body />
+      <Footer />
+    </>
+  );
+};
 
-// export default App;
+export default App;

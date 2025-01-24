@@ -1,0 +1,37 @@
+blockquote {
+  display: flex;
+  width: 40%;
+  text-align: center;
+}
+blockquote h3 {
+  font-size: 50px;
+  color: red;
+}
+blockquote p {
+  font-size: 35px;
+}
+
+#CEC img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+#EC {
+  gap: 40px;
+  display: flex;
+}
+#EC img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+#teams .members {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=Team.css.map */
