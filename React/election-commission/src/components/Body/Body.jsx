@@ -9,8 +9,8 @@ const Body = () => {
     <>
       <Gallery />
       <Team />
-      <Services />
       <News />
+      <Services />
     </>
   );
 };

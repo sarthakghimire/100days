@@ -20,7 +20,7 @@ const Team = () => {
               <img
                 src="https://election.gov.np/admin/public//storage/Commissioner/Dinesh%20Kumar%20Thapaliya%20%20_Web.jpg"
                 alt=""
-                style={{ height: "100%", width: "500px" }}
+                style={{ height: "80%", width: "500px", marginTop: "70px" }}
               />
             </div>
           </blockquote>

@@ -19,9 +19,9 @@ const Header = () => {
         <div className="bottom">
           <a href="#home">Home</a>
           <a href="#gallery">Gallery</a>
+          <a href="#team">Team</a>
           <a href="#news">News</a>
           <a href="#services">Services</a>
-          <a href="#team">Team</a>
         </div>
       </div>
     </>

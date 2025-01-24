@@ -16,10 +16,23 @@
   width: 160px;
 }
 .footer #mid {
+  height: 80%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer #mid a {
+  text-decoration: underline;
+  color: white;
 }
 .footer #right {
   display: flex;
   flex-direction: column;
+}
+.footer #right .socials a img {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  margin: 5px;
 }/*# sourceMappingURL=Footer.css.map */
