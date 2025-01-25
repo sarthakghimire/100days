@@ -101,10 +101,15 @@ const Quiz = () => {
             </p>
           </>
         )}
-        <h2>
-          Score:{score}/{data.length}
-        </h2>
-        <button>Reset</button>
+        {result ? (
+          <>
+            <h2>
+              Score:{score}/{data.length}
+            </h2>
+          </>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   );
