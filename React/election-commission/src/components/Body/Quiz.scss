@@ -1,7 +1,8 @@
 .quiz-questions {
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 550px;
+  width: 600px;
   border: 2px solid gray;
   border-radius: 5px;
   margin: 50px;
@@ -16,11 +17,11 @@
   }
   ul {
     li {
-      .correct {
+      &.correct {
         background: #dffff2;
         border-color: #00d397;
       }
-      .wrong {
+      &.wrong {
         background: #ffebeb;
         border-color: #ff4a4a;
       }
