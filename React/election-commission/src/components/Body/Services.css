@@ -2,4 +2,11 @@
   height: 400px;
   margin-top: 10px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=Services.css.map */

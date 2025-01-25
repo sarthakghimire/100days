@@ -1,0 +1,15 @@
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+  background-color: rgb(23, 38, 104);
+  color: white;
+  .photo-container,
+  .feature-container {
+    height: 50%;
+    width: 90%;
+    background-color: white;
+  }
+}
