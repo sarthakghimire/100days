@@ -3,7 +3,7 @@ import CoatOfArms from "../Header/CoatOfArms.png";
 import ECN from "../Header/ECN.png";
 import "../Header/Header.css";
 // import { Link } from "react-router-dom";
-
+import { HashLink } from "react-router-hash-link";
 const Header = () => {
   return (
     <>
@@ -17,11 +17,21 @@ const Header = () => {
           <img src={ECN} />
         </div>
         <div className="bottom">
-          <a href="#home">Home</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#team">Team</a>
-          <a href="#news">News & Notices</a>
-          <a href="#services">Services</a>
+          <HashLink smooth to="/#home">
+            Home
+          </HashLink>
+          <HashLink smooth to="/#gallery">
+            Gallery
+          </HashLink>
+          <HashLink smooth to="/#team">
+            Team
+          </HashLink>
+          <HashLink smooth to="/#news">
+            News & Notices
+          </HashLink>
+          <HashLink smooth to="/#services">
+            Services
+          </HashLink>
         </div>
       </div>
     </>
