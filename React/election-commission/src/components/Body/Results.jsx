@@ -11,7 +11,7 @@ const Results = () => {
           party={seat.party}
           seats={seat.seats}
           color={seat.color}
-          image="https://assets-localelection2079.ekantipur.com/parties/12546c14ae29ecbfaba3b1a43eae348b.png"
+          image={seat.image}
         />
       ))}
     </div>

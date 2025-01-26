@@ -13,6 +13,9 @@ const RCard = ({ party, seats, color, image }) => {
             <h4>{party}</h4>
             <h5>{seats}</h5>
           </div>
+          <div className="progress-bar">
+            <div className="progress"></div>
+          </div>
         </div>
       </div>
     </div>

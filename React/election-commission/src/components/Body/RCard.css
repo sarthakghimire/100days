@@ -1,13 +1,26 @@
 .parent {
   display: flex;
+  justify-content: space-between;
   border: 1px solid black;
   margin: 5px 0px;
-  width: 40%;
+  width: 35%;
 }
 .parent img {
   height: 70px;
   width: 70px;
+  position: relative;
+  top: 20%;
 }
 .parent .right-side {
   display: flex;
+}
+.parent .progress-bar {
+  height: 20px;
+  width: 280px;
+  border: 1px solid black;
+  position: relative;
+  top: 30%;
+}
+.parent .progress-bar .progress {
+  height: 20px;
 }/*# sourceMappingURL=RCard.css.map */
