@@ -1,0 +1,17 @@
+.result-container .map-of-nepal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -2px;
+}
+.result-container .map-of-nepal img {
+  box-shadow: 0px 0px;
+}
+.result-container .map-of-nepal img :hover {
+  cursor: pointer;
+}
+.result-container .seats-allocated {
+  height: 600px;
+  background-color: red;
+  margin: 20px;
+}/*# sourceMappingURL=Pollresults.css.map */

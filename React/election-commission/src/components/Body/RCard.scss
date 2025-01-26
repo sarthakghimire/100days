@@ -1,0 +1,13 @@
+.parent {
+  display: flex;
+  border: 1px solid black;
+  margin: 5px 0px;
+  width: 40%;
+  img {
+    height: 70px;
+    width: 70px;
+  }
+  .right-side {
+    display: flex;
+  }
+}
