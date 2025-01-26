@@ -1,7 +1,12 @@
 import React from "react";
+import "./Seats.css";
 
 const Seats = () => {
-  return <div>Seats</div>;
+  return (
+    <>
+      <div className="for-seat"></div>
+    </>
+  );
 };
 
 export default Seats;

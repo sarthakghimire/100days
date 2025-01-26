@@ -1,8 +1,8 @@
 import React from "react";
 import "./Pollresults.css";
 import Map from "./Map";
-import Seats from "./Seats";
-import seatsData from "./seats";
+import Seats from "./Seats.jsx";
+import seatsData from "./seats.js";
 import Results from "./Results";
 
 const PollResults = () => {
@@ -10,7 +10,7 @@ const PollResults = () => {
     <div className="result-container">
       <Map />
       <Results />
-      {/* <Seats /> */}
+      <Seats />
       {/* Seats.jsx le chai euta seat ko euta div with color dine ho */}
     </div>
   );
