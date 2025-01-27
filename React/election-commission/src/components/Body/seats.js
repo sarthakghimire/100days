@@ -79,8 +79,7 @@ const seatsData = [
     party: "Nepal Majdoor Kisan Party",
     seats: 1,
     color: "crimson",
-    image:
-      "https://assets-localelection2079.ekantipur.com/parties/4db89c62d4fc494b367625f44cff626a.png",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/04/NWPP-logo.png",
   },
   {
     party: "Rastriya Janamorcha",
