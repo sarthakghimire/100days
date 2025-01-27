@@ -1,6 +1,7 @@
-.for-seat {
+#for-seat {
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 1px;
   height: 400px;
-  background-color: red;
 }/*# sourceMappingURL=Seats.css.map */
