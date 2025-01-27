@@ -1,7 +1,9 @@
 import React from "react";
 import "./RCard.css";
+import seatsData, { totalSeats } from "./seats";
 
 const RCard = ({ party, seats, color, image }) => {
+  const percentage = Math.round((seats / totalSeats) * 100);
   return (
     <div>
       <div className="parent">
@@ -14,7 +16,16 @@ const RCard = ({ party, seats, color, image }) => {
             <h5>{seats}</h5>
           </div>
           <div className="progress-bar">
-            <div className="progress"></div>
+            <div
+              className="progress"
+              style={{
+                height: "20px",
+                width: `${percentage}%`,
+                backgroundColor: color,
+              }}
+            >
+              {percentage}%
+            </div>
           </div>
         </div>
       </div>

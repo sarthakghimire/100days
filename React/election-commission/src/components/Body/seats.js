@@ -16,13 +16,13 @@ const seatsData = [
   {
     party: "CPN (Maoist Centre)",
     seats: 32,
-    color: "orange",
+    color: "crimson",
     image: "https://assets-localelection2079.ekantipur.com/parties/MAOBADI.png",
   },
   {
     party: "Rastriya Swatantra Party",
     seats: 21,
-    color: "blue",
+    color: "skyblue",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzMZEglpivsdT-mXNDGRlaewmGjAbKPTSFeg&s",
   },
@@ -36,7 +36,7 @@ const seatsData = [
   {
     party: "CPN (Unified Socialist)",
     seats: 10,
-    color: "light pink",
+    color: "lightpink",
     image:
       "https://assets-localelection2079.ekantipur.com/parties/Nepal_Communist_Party_Ekikrit_Samajbadi.png",
   },
@@ -50,21 +50,21 @@ const seatsData = [
   {
     party: "Janamat Party",
     seats: 6,
-    color: "dark red",
+    color: "darkred",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlnw2u0WrP6FELEpCtH_EsgJl2xaXnLmvruw&s",
   },
   {
     party: "People's Socialist Party, Nepal",
     seats: 5,
-    color: "light blue",
+    color: "lightblue",
     image:
       "https://assets-localelection2079.ekantipur.com/parties/4db89c62d4fc494b367625f44cff626a.png",
   },
   {
     party: "Loktantrik Samajwadi Party, Nepal",
     seats: 4,
-    color: "light green",
+    color: "lightgreen",
     image:
       "https://assets-localelection2079.ekantipur.com/parties/Loktantrik_Samanbadi_Party_Nepal.png",
   },
@@ -105,4 +105,10 @@ const seatsData = [
   },
 ];
 
+let totalSeats = 0;
+for (let i = 0; i < seatsData.length; i++) {
+  totalSeats += seatsData[i].seats;
+}
+
 export default seatsData;
+export { totalSeats };
