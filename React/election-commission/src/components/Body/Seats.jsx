@@ -16,7 +16,7 @@ const Seats = () => {
         }}
       >
         {seatsData.map((party) =>
-          Array.from({ length: party.seats }).map((_, index) => (
+          Array.from({ length: party.seats }).map(() => (
             <Seatbox
               // key={`${party.party}-${index}`}
               backgroundColor={party.color}
