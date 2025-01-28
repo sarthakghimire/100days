@@ -1,27 +1,31 @@
 import React from "react";
 import "./Seats.css";
-import seatsData, { totalSeats } from "./seats";
+import seatsData from "./seats";
+import Seatbox from "./Seatbox";
 
 const Seats = () => {
-  const createSeats = () => {
-    const elements = [];
-    for (let i = 0; i < totalSeats; i++) {
-      elements.push(
-        <div
-          key={i}
-          style={{
-            width: "10px",
-            height: "10px",
-            backgroundColor: seatsData.color,
-            margin: "2px",
-          }}
-        ></div>
-      );
-    }
-    return elements;
-  };
-
-  return <div id="for-seat">{createSeats()}</div>;
+  return (
+    <>
+      <h2>Parliament Structure</h2>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          width: "50%",
+          justifyContent: "center",
+        }}
+      >
+        {seatsData.map((party) =>
+          Array.from({ length: party.seats }).map((_, index) => (
+            <Seatbox
+              // key={`${party.party}-${index}`}
+              backgroundColor={party.color}
+            />
+          ))
+        )}
+      </div>
+    </>
+  );
 };
 
 export default Seats;

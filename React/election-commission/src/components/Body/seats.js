@@ -98,7 +98,7 @@ const seatsData = [
   {
     party: "Independent",
     seats: 2,
-    color: "none",
+    color: "aliceblue",
     image:
       "https://assets-localelection2079.ekantipur.com/parties/4db89c62d4fc494b367625f44cff626a.png",
   },

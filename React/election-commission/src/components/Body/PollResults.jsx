@@ -11,6 +11,7 @@ const PollResults = () => {
       <Map />
       <Results />
       <Seats />
+
       {/* Seats.jsx le chai euta seat ko euta div with color dine ho */}
     </div>
   );

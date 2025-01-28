@@ -6,7 +6,6 @@ const Results = () => {
   return (
     <div>
       <h2>Total Seats by Party</h2>
-
       {seatsData.map((seat, index) => (
         <RCard
           key={index}
