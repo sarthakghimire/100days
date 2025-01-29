@@ -7,11 +7,11 @@ const Seatbox = ({ backgroundColor }) => {
         style={{
           height: "20px",
           width: "20px",
-          borderRadius: "5px",
+          borderRadius: "50%",
           display: "flex",
           flexWrap: "wrap",
           backgroundColor: backgroundColor,
-          margin: "5px",
+          margin: "3px",
         }}
       ></div>
     </>
