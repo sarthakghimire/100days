@@ -6,8 +6,8 @@ import Cards from "./Cards";
 
 const Movie = () => {
   const [data, setData] = useState([]);
-  //const API = "http://www.omdbapi.com/?i=tt3896198&apikey=b530ea32";
-  const API = "http://www.omdbapi.com/?s=Avengers&apikey=b530ea32";
+  const movieName = "Fast&furious";
+  const API = `http://www.omdbapi.com/?s=${movieName}&apikey=b530ea32`;
 
   const getMovieData = async () => {
     try {
@@ -22,11 +22,16 @@ const Movie = () => {
     getMovieData();
   }, []);
   return (
-    <ul style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-      {data.map((curElem) => {
-        return <Cards key={curElem.imdbID} movieData={curElem} />;
-      })}
-    </ul>
+    <>
+      <h1 style={{ paddingLeft: "34px" }}>
+        Featured Movies with keyword: {movieName}
+      </h1>
+      <ul style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
+        {data.map((curElem) => {
+          return <Cards key={curElem.imdbID} movieData={curElem} />;
+        })}
+      </ul>
+    </>
   );
 };
 

@@ -32,7 +32,12 @@ const Cards = ({ movieData }) => {
     <li style={{ listStyle: "none" }}>
       <div>
         <div>
-          <img src={Poster} className="poster" alt={imdbID} />
+          <img
+            src={Poster}
+            className="poster"
+            alt={imdbID}
+            style={{ height: "400px", width: "280px" }}
+          />
         </div>
         <div>
           <div>
