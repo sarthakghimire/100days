@@ -1,5 +1,4 @@
 import { useState } from "react";
-import axios from "axios";
 
 function ERegistration() {
   const [formData, setFormData] = useState({
@@ -10,24 +9,17 @@ function ERegistration() {
   });
 
   const [message, setMessage] = useState("");
+  const [registrations, setRegistrations] = useState([]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const response = await axios.post("http://localhost:5000/register", {
-        ...formData,
-        status: "Pending",
-      });
-      setMessage(response.data.message);
-      setFormData({ name: "", email: "", age: "", citizenship: "" });
-    } catch (error) {
-      setMessage("Error registering. Please try again.");
-    }
+    setRegistrations([...registrations, { ...formData, status: "Pending" }]);
+    setMessage("Thank you for registering!");
+    setFormData({ name: "", email: "", age: "", citizenship: "" });
   };
 
   return (

@@ -12,6 +12,9 @@ const VoterCard = ({ user }) => {
         textAlign: "center",
       }}
     >
+      <img src="" alt="" />
+      <p>Election Commission of Nepal</p>
+      <p>Voter Card</p>
       <img
         src={user.image}
         alt="Voter"
